@@ -1,12 +1,40 @@
 Students:
 Hugo Liu - 46439406
-Ethan Krol - XXXXXXXXXX
+Ethan Krol - 33541943
 
-Main Functionality (Todo by Ethan)
+Main Functionality
 
-- point to example input/output
-- instructions on how to run the code (python ... file... etc)
-- assumptions
+- Example inputs located in inputs folder
+- To run this project, git clone this repository to your computer, and then enter the new repository folder.
+- Inside this folder, run python main.py (or python3 main.py, depending on your setup).
+- In the terminal, specify the relative path to your input file. The algorithm will print the result, and then prompt you for a file path to save the result to.
+
+Input Assumptions:
+
+- This project assumes the following format for files:
+Line 1: number of characters in the alphabet
+Next K Lines: character and value, separated by space
+Next line: String A (first string)
+Next line: String B (second string)
+
+ex.
+
+3
+a 2
+b 4
+c 5
+aacb
+caab
+
+Output:
+- After running python main.py and specifying your input file path, the algorithm will print two lines
+First line: Value of HVLCS
+Second line: Character subsequence for given value (there can be multiple answers for this, but our algorithm just returns one answer, usually the shortest one)
+
+ex.
+
+9
+cb
 
 ### Question 1:
 
