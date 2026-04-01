@@ -55,7 +55,20 @@ cb
 
 ### Question 2:
 
-    TODO by Ethan
+    OPT(i,j) = {
+        0 if (i == 0 or j == 0)
+        weight[str[i]] + OPT(i-1, j-1) if str[i] == str[j]
+        else, 
+        max(
+            OPT(i-1, j), OPT(i, j-1)
+        )
+    }
+
+    This recurrence is correct because, at any point, we either take the new maximum given a match or gap with the largest value.
+    The base cases are there because, if we are at the start of a string, there is nothing to match, and thus the value is 0.
+    If there is a match, we add the characters value to the previous step, because it is always optimal to take add value rather than not take one (the case with a gap).
+    Otherwise, we look at the largest prior alignment (shifting either character back one) to find the largest value we've seen yet to bring into our future subproblems/characters to match.
+    This allows us to computer all of the highest values at each individual step, with bubbles up to the final character, and allows us to trace our history back to find the path of alignment.
 
 ### Question 3:
 
